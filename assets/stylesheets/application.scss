@@ -1,6 +1,17 @@
 body {
   color: black;
-  // background-color: black;
+  background-color: white;
+}
+
+.messages {
+  height: 90vh;
+  overflow-y: scroll; 
+}
+
+.channels {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .app {

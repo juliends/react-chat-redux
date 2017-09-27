@@ -3,7 +3,7 @@ import React from 'react';
 const Message = ({ message: { author, content, createdAt } }) => {
   return (
     <div className="">
-      <p>{author}</p>
+      <p><strong>{author}</strong></p>
       <p>{content}</p>
       <p>{createdAt}</p>
       <hr />

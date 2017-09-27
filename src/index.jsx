@@ -33,7 +33,7 @@ const initialState = {
       created_at: '2017-09-26T23:03:21.194Z'
     }
   ],
-  channels: ['React', 'Le wagon'],
+  channels: ['react', 'paris', 'general'],
   selectedChannel: 'general',
   currentUsername: 'Juliends'
 };
@@ -52,5 +52,5 @@ ReactDOM.render(
   <Provider store={createStore(reducers, initialState, middlewares)}>
     <App />
   </Provider>,
-  document.querySelector('.container')
+  document.querySelector('.container-fluid')
 );

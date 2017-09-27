@@ -11,17 +11,24 @@ import MessageForm from './message_form';
 
 class MessageList extends Component {
   componentWillMount() {
-    this.props.fetchMessages('general');
+    this.props.fetchMessages(this.props.selectedChannel);
   }
 
   componentDidMount() {
     // setInterval(() => this.props.fetchMessages('general'), 1000);
+    this.listDiv.scrollTop = this.listDiv.scrollHeight;
   }
- 
+
+  componentDidUpdate() {
+    // console.log(this.listDiv.scrollHeight);
+    // window.scrollTo(0, 10000000);
+    this.listDiv.scrollTop = this.listDiv.scrollHeight;
+  }
+
   render() {
     const messages = this.props.messages;
     return (
-      <div>
+      <div className="messages" ref={(element) => { this.listDiv = element; }}>
         {messages.map(message => <Message key={message.created_at} message={message} />)}
         <MessageForm />
       </div>
@@ -31,7 +38,8 @@ class MessageList extends Component {
 
 function mapStateToProps(state) {
   return {
-    messages: state.messages
+    messages: state.messages,
+    selectedChannel: state.selectedChannel
   };
 }
 
