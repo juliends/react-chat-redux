@@ -15,7 +15,6 @@ export function setSelectedChannel(channel) {
 }
 
 export function createMessage(channel, author, content) {
-  console.log(channel, author, content);
   const promise = fetch(`https://wagon-chat.herokuapp.com/${channel}/messages`,
     {
       method: "POST",

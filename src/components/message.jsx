@@ -7,7 +7,7 @@ const Message = ({ message: { author, content, createdAt } }) => {
       <p><strong>{author}</strong></p>
       <Emojify>
         <p>{content}</p>
-       </Emojify>
+      </Emojify>
       <p>{createdAt}</p>
       <hr />
     </div>
