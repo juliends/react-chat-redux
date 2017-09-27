@@ -34,7 +34,7 @@ const initialState = {
     }
   ],
   channels: ['React', 'Le wagon'],
-  selectedChannel: 'React',
+  selectedChannel: 'general',
   currentUsername: 'Juliends'
 };
 

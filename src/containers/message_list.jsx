@@ -17,7 +17,7 @@ class MessageList extends Component {
     const messages = this.props.messages;
     return (
       <div>
-        {messages.map(message => <Message key={message.created_at} message={message}/>)}
+        {messages.map(message => <Message key={message.created_at} message={message} />)}
         <MessageForm />
       </div>
     );
