@@ -13,6 +13,11 @@ class MessageList extends Component {
   componentWillMount() {
     this.props.fetchMessages('general');
   }
+
+  componentDidMount() {
+    setInterval(() => this.props.fetchMessages('general'), 1000);
+  }
+
   render() {
     const messages = this.props.messages;
     return (
