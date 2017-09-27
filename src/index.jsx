@@ -19,6 +19,25 @@ import currentUsernameReducer from './reducers/currentUsername_reducer';
 // Middlewares
 const middlewares = applyMiddleware(logger, reduxPromise);
 
+// Initial state
+const initialState = {
+  messages: [
+    {
+      author: 'anonymous92',
+      content: 'Hello world!',
+      created_at: '2017-09-26T23:03:16.365Z'
+    },
+    {
+      author: 'anonymous77',
+      content: 'My name is anonymous77',
+      created_at: '2017-09-26T23:03:21.194Z'
+    }
+  ],
+  channels: ['React', 'Le wagon'],
+  selectedChannel: 'React',
+  currentUsername: 'Juliends'
+};
+
 // State and reducers
 const reducers = combineReducers({
   // state: (state = {}, action) => state
@@ -30,7 +49,7 @@ const reducers = combineReducers({
 
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers, {}, middlewares)}>
+  <Provider store={createStore(reducers, initialState, middlewares)}>
     <App />
   </Provider>,
   document.querySelector('.container')
