@@ -18,15 +18,11 @@ class MessageList extends Component {
     // setInterval(() => this.props.fetchMessages('general'), 1000);
   }
  
-  handleRef() {
-    console.log(this);
-  }
-
   render() {
     const messages = this.props.messages;
     return (
       <div>
-        {messages.map(message => <Message ref={(input) => { this.textInput = input; }} key={message.created_at} message={message} />)}
+        {messages.map(message => <Message key={message.created_at} message={message} />)}
         <MessageForm />
       </div>
     );
