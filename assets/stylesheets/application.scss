@@ -3,18 +3,19 @@ body {
   background-color: white;
 }
 
-.messages {
-  height: 90vh;
-  overflow-y: scroll; 
-}
-
-.channels {
-  color: red;
-  font-size: 20px;
-  cursor: pointer;
-}
-
 .app {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  .channels {
+    background-color: #F9F8F8;
+    color: #272838;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .messages {
+    height: 90vh;
+    overflow-y: scroll; 
+  }
 }
+
