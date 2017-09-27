@@ -7,6 +7,7 @@ import { fetchMessages } from '../actions';
 
 // Components
 import Message from '../components/message';
+import MessageForm from './message_form';
 
 class MessageList extends Component {
   componentWillMount() {
@@ -15,7 +16,10 @@ class MessageList extends Component {
   render() {
     const messages = this.props.messages;
     return (
-      messages.map(message => <Message key={message.created_at} message={message}/>)
+      <div>
+        {messages.map(message => <Message key={message.created_at} message={message}/>)}
+        <MessageForm />
+      </div>
     );
   }
 }
