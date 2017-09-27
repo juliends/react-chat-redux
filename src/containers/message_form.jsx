@@ -15,7 +15,7 @@ class MessageForm extends Component {
 
   render() {
     return (
-      <form className='form-control'>
+      <form className='form'>
         <input type="text" id="message" />
         <button onClick={this.clickHandler}>Send</button>
       </form>

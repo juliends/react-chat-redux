@@ -8,14 +8,23 @@ body {
   margin-bottom: 20px;
   display: flex;
   .channels {
+    padding: 1em;
+    height: 90vh;
+    width: 20%;
     background-color: #F9F8F8;
     color: #272838;
-    font-size: 20px;
+    font-size: 23px;
     cursor: pointer;
   }
   .messages {
+    padding: 2em;
+    height: 100%;
+    width: 80%;
     height: 90vh;
     overflow-y: scroll; 
+  }
+  .form {
+    padding: 1em;
   }
 }
 
