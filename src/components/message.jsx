@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Message = (props) => {
-  const message = props.message;
+const Message = ({ message: { author, content, createdAt } }) => {
   return (
     <div className="">
-      <p>{message.author}</p>
-      <p>{message.content}</p>
-      <p>{message.created_at}</p>
+      <p>{author}</p>
+      <p>{content}</p>
+      <p>{createdAt}</p>
+      <hr />
     </div>
   );
 };
